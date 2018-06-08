@@ -73,13 +73,7 @@ def checkNeighbors(difficulty, group, num):
 difficulty = textChoice(('1', '2', '3', '4'), "What difficulty do you want to solve it on? (1-4) ")
 decision = textChoice(('1', '2'), "Do you want to manually input each Zoombini here (1), or read them from a .txt file (2)? ")
 if decision == '1':
-    group = []
-    while len(group) < 16:
-        hair = textChoice(('1', '2', '3', '4'), "Select a hair style for Zoombini " + str(len(group) + 1) + " (1: Spiky, 2: Bowl Cut, 3: Bald Tuft, 4: Ponytail, 5: Green Hat) ")
-        eyes = textChoice(('1', '2', '3', '4'), "Select an eyes style for Zoombini " + str(len(group) + 1) + " (1: Normal, 2: Sleepy, 3: Cyclops, 4: Glasses, 5: Sunglasses) ")
-        nose = textChoice(('1', '2', '3', '4'), "Select a nose style for Zoombini " + str(len(group) + 1) + " (1: Orange, 2: Red, 3: Blue, 4: Green, 5: Purple) ")
-        feet = textChoice(('1', '2', '3', '4'), "Select a feet style for Zoombini " + str(len(group) + 1) + " (1: Pink Shoes, 2: Spring, 3: Bicycle, 4: Propeller, 5: Roller Skates) ")
-        group.append(Zoombini(Zoombini.hair_styles[int(hair) - 1], Zoombini.eyes_styles[int(eyes) - 1], Zoombini.nose_styles[int(nose) - 1], Zoombini.feet_styles[int(feet) - 1]))
+    group = Zoombini.createGroupFromUserInput()
 else:
     fileWorked = False
     while not fileWorked:

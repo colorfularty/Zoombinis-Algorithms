@@ -77,6 +77,17 @@ class Zoombini(object):
                 if z.hair == trait2 or z.eyes == trait2 or z.nose == trait2 or z.feet == trait2:
                     return True
         return False
+    
+    @staticmethod
+    def createGroupFromUserInput():
+        group = []
+        while len(group) < 16:
+            hair = textChoice(('1', '2', '3', '4', '5'), "Select a hair style for Zoombini " + str(len(group) + 1) + " (1: Spiky, 2: Bowl Cut, 3: Bald Tuft, 4: Ponytail, 5: Green Hat) ")
+            eyes = textChoice(('1', '2', '3', '4', '5'), "Select an eyes style for Zoombini " + str(len(group) + 1) + " (1: Normal, 2: Sleepy, 3: Cyclops, 4: Glasses, 5: Sunglasses) ")
+            nose = textChoice(('1', '2', '3', '4', '5'), "Select a nose style for Zoombini " + str(len(group) + 1) + " (1: Orange, 2: Red, 3: Blue, 4: Green, 5: Purple) ")
+            feet = textChoice(('1', '2', '3', '4', '5'), "Select a feet style for Zoombini " + str(len(group) + 1) + " (1: Pink Shoes, 2: Spring, 3: Bicycle, 4: Propeller, 5: Roller Skates) ")
+            group.append(Zoombini(Zoombini.hair_styles[int(hair) - 1], Zoombini.eyes_styles[int(eyes) - 1], Zoombini.nose_styles[int(nose) - 1], Zoombini.feet_styles[int(feet) - 1]))
+        return group
 
 def textChoice(textDecisions, inputText, errorText = "Invalid choice; try again."):
     result = None
