@@ -1,0 +1,16 @@
+bald tuft:sunglasses:orange:pink shoes
+bowl cut:cyclops:red:spring
+green hat:sleepy:purple:pink shoes
+bald tuft:sleepy:red:pink shoes
+green hat:glasses:red:roller skates
+spiky:glasses:orange:bicycle
+spiky:sunglasses:green:roller skates
+green hat:cyclops:blue:bicycle
+spiky:sleepy:purple:roller skates
+ponytail:normal:purple:spring
+bowl cut:glasses:blue:bicycle
+ponytail:normal:red:pink shoes
+ponytail:glasses:red:bicycle
+green hat:normal:orange:bicycle
+spiky:cyclops:blue:roller skates
+ponytail:sleepy:green:bicycle
